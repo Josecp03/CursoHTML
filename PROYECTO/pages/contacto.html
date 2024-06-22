@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto</title><!--Título de la página-->
+</head>
+<body>
+    <header><!--Cabecera de la página-->
+        <h1>Contacto</h1>
+        <hr><!--Línea horizontal-->
+    </header>
+    <main><!--Contenido principal de la página-->
+        <form action="../pages/envioFormulario.html"><!--Formulario-->
+            <fieldset><!--Campo de formulario-->
+                <legend>Introduce tus datos personales</legend><!--Título del campo del formulario-->
+                <label for="nombre">Nombre(*)</label><br><!--label para darle nombre al input siguiente-->
+                <input type="text" name="txtNombre" id="nombre" placeholder="Escriba aquí tu nombre..." required maxlength="10"><br><br><!--input de tipo texto-->
+                <label for="edad">Edad</label><br>
+                <input type="number" name="nbEdad" id="edad" placeholder="0"><br><br><!--input de tipo número-->
+                <label for="fechaNacimiento">Fecha Nacimiento</label><br>
+                <input type="date" name="dateFechaNacimiento" id="fechaNacimiento"><br><br><!--input de tipo fecha-->
+                <label for="paisNacimiento">País Nacimiento</label><br>
+                <select name="pais" id="paisNacimiento"><!--select con varias opciones a elegir-->
+                    <option value="es">España</option><!--opción del select-->
+                    <option value="fr">Francia</option>
+                    <option value="al">Alemania</option>
+                    <option value="marr">Marruecos</option>
+                    <option value="and">Andorra</option>
+                    <option value="por">Portugal</option>
+                </select><br><br>
+                <label for="dni">DNI(*)</label><br>
+                <input type="text" name="txtDni" id="dni" placeholder="25789658L" required maxlength="9" size="6"><br><br><!--input de tipo texto reducido-->
+                <label for="correo">Correo(*)</label><br>
+                <input type="email" name="emailCorreo" id="correo" placeholder="example@gmail.com" size="40" required><br><br><!--input de tipo email-->
+                <label for="contraseña">Contraseña(*)</label><br>
+                <input type="password" name="pswContraseña" id="contraseña" placeholder="Escriba aquí tu contraseña..." required size="25"><br><br><!--input de tipo password-->
+                Género<br>
+                <input type="radio" name="rbGenero" value="hombre" id="hombre"> <label for="hombre">Hombre</label><br><!--input de tipo radioButton-->
+                <input type="radio" name="rbGenero" value="mujer" id="mujer"> <label for="mujer">Mujer</label><br>
+                <input type="radio" name="rbGenero" value="otros" id="otros"> <label for="otros">Otros</label><br>
+            </fieldset>
+            <br>
+            <fieldset><!--Segundo campo del formulario-->
+                <legend>Información complementaria</legend>
+                <label for="mensaje">Mensaje</label><br>
+                <textarea name="txtaMensaje" id="mensaje" cols="50" rows="6" placeholder="Deja aquí el motivo de tu mensaje..." minlength="10" maxlength="500"></textarea><br><br><!--Área de texto-->
+                <input type="checkbox" name="chkTerminos" value="yes" id="terminos" required> <label for="terminos">Aceptar Términos y Servicios</label><br><br><!--Checkbox obligatoria-->
+                <label for="enlace">Enlace a tu página web</label><br>
+                <input type="url" name="urlEnlace" id="enlace" placeholder="http://mimascota.es"><br><br><!--input de tipo url-->
+                <label for="archivo">Mándame una foto de tu mascota</label><br>
+                <input type="file" name="fileArchivo" id="archivo"><!--inout de tipo file-->
+            </fieldset>
+            <br>
+            <input type="submit" value="Enviar Datos">&ensp;<!--Botón de enviar datos-->
+            <input type="reset" value="Borrar Datos"><br><!--Botón de borrar datos-->
+        </form>
+        <p><a href="../index.html">&lt;&#45;&#45; Volver a la página principal</a></p><!--Enlace para volver al index-->
+        <hr><!--Línea horizontal-->
+    </main>
+    <footer><!--Pie de página-->
+        <p><b>Autor de la web:</b> José Corrochano Pardo  &copy</p>
+    </footer>
+</body>
+</html>
